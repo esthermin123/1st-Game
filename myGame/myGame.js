@@ -13,16 +13,16 @@ var scoreText;
 
 
 function preload() {
-    game.load.image('sky', 'assets/sky.png');
-    game.load.image('ground', 'assets/platform.png');
-    game.load.image('side', 'assets/platform.1.png');
-    game.load.image('diamond', 'assets/diamond.png', 20, 18);
+    game.load.image('outer space', 'assets/download.jpg');
+    game.load.image('ground', 'assets/platform.2.jpg');
+    game.load.image('side', 'assets/platform.1.jpg');
+    game.load.image('diamond', 'assets/diamond.png', 32, 30);
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 }
 game.physics.startSystem(Phaser.Physics.ARCADE);
 
 function create() {
-    game.add.sprite(0, 0, 'sky');
+    game.add.sprite(0, 0, 'outer space');
     platform1 = game.add.group();
     platform1.enableBody = true;
     var side = platform1.create(0, game.world.height - 64, 'side');
@@ -98,7 +98,7 @@ function create() {
         diamond.body.gravity.y = 6;
         diamond.body.bounce.y = 0.7 + Math.random() * 0.2;
     }
-    scoreText = game.add.text(620, 550, 'Score: 0', { fontSize: '32px', fill: '#000' });
+    scoreText = game.add.text(620, 550, 'Score: 0', { fontSize: '32px', fill: '#499' });
 
 
 }
