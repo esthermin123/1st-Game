@@ -220,7 +220,7 @@ function update() {
     game.physics.arcade.collide(stars, platforms);
     game.physics.arcade.overlap(player, stars, collectStar, null, this);
 
-    if(score >= 360)
+    if(score >= 359)
     game.add.image(0, 0, 'you win');
 }
 
